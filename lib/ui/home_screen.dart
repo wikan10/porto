@@ -9,7 +9,26 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _appBar(context),
-      body: Center(child: Text('No Story')),
+      body: Center(
+          child: TextButton(
+              onPressed: () {
+                showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        title: Text('Perhatian!'),
+                        content: Text('Silahkan Upload Story Baru'),
+                        actions: <Widget>[
+                          TextButton(
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                              child: Text('Ok'))
+                        ],
+                      );
+                    });
+              },
+              child: Text('No Story'))),
       drawer: _drawer(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
