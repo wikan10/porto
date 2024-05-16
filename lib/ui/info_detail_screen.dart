@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class InfoDetailScreen extends StatefulWidget {
-  const InfoDetailScreen({Key? key}) : super(key: key);
+  const InfoDetailScreen({super.key});
 
   @override
   State<InfoDetailScreen> createState() => _InfoDetailScreenState();
@@ -77,7 +77,7 @@ class _InfoDetailScreenState extends State<InfoDetailScreen> {
                 child: Container(
                   width: boxSize,
                   height: boxSize,
-                  color: Color.fromARGB(255, 8, 255, 255),
+                  color: const Color.fromARGB(255, 8, 255, 255),
                 ),
               ),
             ),
@@ -85,12 +85,12 @@ class _InfoDetailScreenState extends State<InfoDetailScreen> {
         ),
       ),
       bottomNavigationBar: Container(
-        color: Color.fromARGB(127, 33, 149, 243),
+        color: const Color.fromARGB(127, 33, 149, 243),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Text(
             ' - Taps: $numOfSingleTap  - Double Taps: $numOfDoubleTap  - Long Press: $numOfLongPress ',
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 18,
               color: Colors.white,
             ),

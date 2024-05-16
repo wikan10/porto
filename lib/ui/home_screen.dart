@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
       body: InkWell(
         onTap: () {
           Navigator.push(context,
-              MaterialPageRoute(builder: (context) => AddStoryScreen()));
+              MaterialPageRoute(builder: (context) => const AddStoryScreen()));
         },
         child: Hero(
           tag: 'image_animation',
@@ -29,11 +29,11 @@ class HomeScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(context,
-              MaterialPageRoute(builder: (context) => AddStoryScreen()));
+              MaterialPageRoute(builder: (context) => const AddStoryScreen()));
         },
-        child: Icon(Icons.add_a_photo),
         backgroundColor: Colors.black87,
         foregroundColor: Colors.white,
+        child: const Icon(Icons.add_a_photo),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomNavigationBar(
@@ -55,10 +55,10 @@ class HomeScreen extends StatelessWidget {
       child: ListView(
         children: const [
           DrawerHeader(
-            child: Icon(Icons.person),
             decoration: BoxDecoration(
               color: Colors.blue, // Ubah warna sesuai preferensi Anda
             ),
+            child: Icon(Icons.person),
           ),
           ListTile(
             leading: Icon(Icons.person),
@@ -81,9 +81,9 @@ class HomeScreen extends StatelessWidget {
         IconButton(
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => InfoDetailScreen()));
+                  MaterialPageRoute(builder: (context) => const InfoDetailScreen()));
             },
-            icon: Icon(Icons.info))
+            icon: const Icon(Icons.info))
       ],
     );
   }
