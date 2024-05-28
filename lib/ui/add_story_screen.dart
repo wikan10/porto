@@ -26,7 +26,12 @@ class _AddStoryScreenState extends State<AddStoryScreen> {
     return Random().nextDouble() * 100;
   }
 
+  // Fungsi ini menghasilkan warna acak
   Color randomColor() {
+    // Menggunakan Random().nextDouble() untuk mendapatkan nilai acak antara 0 dan 1
+    // Mengalikan nilai tersebut dengan 0xFFFFFF untuk mendapatkan nilai dalam rentang warna RGB
+    // Mengkonversi hasilnya menjadi integer menggunakan toInt()
+    // Membuat objek Color dari integer tersebut dan mengatur opasitas menjadi 1.0
     return Color((Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0);
   }
 
